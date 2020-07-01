@@ -1,6 +1,7 @@
 package com.transfer.servlet;
 
 import com.alibaba.fastjson.JSON;
+import com.transfer.factory.BeanFactory;
 import com.transfer.model.Result;
 import com.transfer.service.TransferService;
 import com.transfer.service.impl.TransferServiceImpl;
@@ -16,6 +17,13 @@ import java.io.IOException;
 
 @WebServlet(name="transferServlet",urlPatterns = "/transferServlet")
 public class TransferServlet extends HttpServlet {
+
+//    private TransferService transferService = (TransferService) BeanFactory.getBean("transferService");
+    private TransferService transferService;
+
+    public void setTransferService(TransferService transferService) {
+        this.transferService = transferService;
+    }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -37,7 +45,7 @@ public class TransferServlet extends HttpServlet {
         try {
 
             // 2. 调用service层方法
-            TransferService transferService = new TransferServiceImpl();
+//            TransferService transferService = new TransferServiceImpl();
             transferService.transfer(fromCardNo,toCardNo,money);
             result.setStatus("200");
         } catch (Exception e) {
