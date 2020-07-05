@@ -71,7 +71,6 @@ public class BeanFactory {
 
             }
 
-            System.out.println("---------------初始化静态块");
         } catch (DocumentException | ClassNotFoundException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -89,7 +88,6 @@ public class BeanFactory {
      * @return
      */
     public static Object getBean(String id){
-        System.out.println("初始化类"+id);
         return beanMap.get(id);
     }
 }
