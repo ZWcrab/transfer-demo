@@ -2,19 +2,18 @@ package com.transfer.dao.impl;
 
 
 import com.alibaba.fastjson.JSON;
+import com.annotation.Service;
 import com.transfer.dao.AccountDao;
 import com.transfer.model.Account;
 import com.transfer.utils.ConnectionUtils;
-import com.transfer.utils.DruidUtils;
 
-import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Enumeration;
 
 
+@Service(value = "accountDao")
 public class JdbcAccountDaoImpl implements AccountDao {
 
     private ConnectionUtils connectionUtils;

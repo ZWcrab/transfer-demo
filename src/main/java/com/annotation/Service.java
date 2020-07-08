@@ -1,4 +1,4 @@
-package com.transfer.annotation;
+package com.annotation;
 
 import java.lang.annotation.*;
 

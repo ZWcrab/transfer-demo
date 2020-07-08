@@ -7,7 +7,7 @@ public class TransactionManager {
     private ConnectionUtils connectionUtils;
 
     public void setConnectionUtils(ConnectionUtils connectionUtils) {
-        this.connectionUtils = connectionUtils;
+        this.connectionUtils=connectionUtils;
     }
 
 //    private static TransactionManager transactionManager = new TransactionManager();

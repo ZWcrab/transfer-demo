@@ -1,22 +1,23 @@
 package com.transfer.service.impl;
 
 
+import com.annotation.Autowired;
+import com.annotation.Service;
 import com.transfer.dao.AccountDao;
-import com.transfer.dao.impl.JdbcAccountDaoImpl;
-import com.transfer.factory.BeanFactory;
 import com.transfer.model.Account;
 import com.transfer.service.TransferService;
-import com.transfer.utils.TransactionManager;
 
+@Service(value = "transferService")
 public class TransferServiceImpl implements TransferService {
 
 
     //    private AccountDao accountDao = (AccountDao) BeanFactory.getBean("accountDao");
+    @Autowired
     private AccountDao accountDao;
 
-    public void setAccountDao(AccountDao accountDao) {
-        this.accountDao = accountDao;
-    }
+//    public void setAccountDao(AccountDao accountDao) {
+//        this.accountDao = accountDao;
+//    }
 
 //    private TransactionManager transactionManager;
 //
