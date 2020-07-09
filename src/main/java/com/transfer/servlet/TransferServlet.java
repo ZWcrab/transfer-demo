@@ -23,13 +23,6 @@ import java.lang.reflect.Field;
 public class TransferServlet extends HttpServlet {
 
         private TransferService transferService = (TransferService) BeanFactory.getBean("transferService");
-//    private ProxyFactory proxyFactory = (ProxyFactory) BeanFactory.getBean("proxyFactory");
-//    @Autowired
-//    private TransferService transferService;
-
-
-
-//        private TransferService transferService = (TransferService) proxyFactory.jdkProxy(BeanFactory.getBean("transferService"));
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
