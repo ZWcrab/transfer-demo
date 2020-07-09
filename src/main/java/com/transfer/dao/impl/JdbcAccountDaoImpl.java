@@ -2,6 +2,7 @@ package com.transfer.dao.impl;
 
 
 import com.alibaba.fastjson.JSON;
+import com.annotation.Autowired;
 import com.annotation.Service;
 import com.transfer.dao.AccountDao;
 import com.transfer.model.Account;
@@ -16,11 +17,12 @@ import java.sql.ResultSet;
 @Service(value = "accountDao")
 public class JdbcAccountDaoImpl implements AccountDao {
 
+    @Autowired
     private ConnectionUtils connectionUtils;
 
-    public void setConnectionUtils(ConnectionUtils connectionUtils) {
-        this.connectionUtils = connectionUtils;
-    }
+//    public void setConnectionUtils(ConnectionUtils connectionUtils) {
+//        this.connectionUtils = connectionUtils;
+//    }
 
     @Override
     public Account queryAccountByCardNo(String cardNo) throws Exception {

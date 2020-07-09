@@ -1,14 +1,19 @@
 package com.transfer.utils;
 
+import com.annotation.Autowired;
+import com.annotation.Service;
+
 import java.sql.SQLException;
 
+@Service
 public class TransactionManager {
 
+    @Autowired
     private ConnectionUtils connectionUtils;
 
-    public void setConnectionUtils(ConnectionUtils connectionUtils) {
-        this.connectionUtils=connectionUtils;
-    }
+//    public void setConnectionUtils(ConnectionUtils connectionUtils) {
+//        this.connectionUtils=connectionUtils;
+//    }
 
 //    private static TransactionManager transactionManager = new TransactionManager();
 //

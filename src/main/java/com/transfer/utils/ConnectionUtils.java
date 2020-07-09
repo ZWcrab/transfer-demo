@@ -1,8 +1,12 @@
 package com.transfer.utils;
 
+import com.annotation.Service;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
+
+@Service
 public class ConnectionUtils {
 
     private ThreadLocal<Connection> threadLocal = new ThreadLocal<Connection>();

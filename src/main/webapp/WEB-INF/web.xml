@@ -5,9 +5,10 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-  <listener>
-    <listener-class>com.listener.BeanContextListener</listener-class>
-  </listener>
+<!--  <listener>-->
+<!--    <listener-class>com.listener.BeanContextListener</listener-class>-->
+<!--  </listener>-->
+
 </web-app>
 
 

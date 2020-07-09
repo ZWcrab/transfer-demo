@@ -15,18 +15,21 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+import java.lang.reflect.Field;
 
 
 @WebServlet(name="transferServlet",urlPatterns = "/transferServlet")
-
+@Service
 public class TransferServlet extends HttpServlet {
 
-    //    private TransferService transferService = (TransferService) BeanFactory.getBean("transferService");
-    private ProxyFactory proxyFactory = (ProxyFactory) BeanFactory.getBean("proxyFactory");
-    @Autowired
-    private TransferService transferService;
-//    private TransferService transferService = (TransferService) proxyFactory.jdkProxy(BeanFactory.getBean("transferService"));
+        private TransferService transferService = (TransferService) BeanFactory.getBean("transferService");
+//    private ProxyFactory proxyFactory = (ProxyFactory) BeanFactory.getBean("proxyFactory");
+//    @Autowired
+//    private TransferService transferService;
+
+
+
+//        private TransferService transferService = (TransferService) proxyFactory.jdkProxy(BeanFactory.getBean("transferService"));
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

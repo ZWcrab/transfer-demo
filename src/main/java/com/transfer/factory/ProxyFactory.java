@@ -1,18 +1,22 @@
 package com.transfer.factory;
 
+import com.annotation.Autowired;
+import com.annotation.Service;
 import com.transfer.utils.TransactionManager;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
+@Service
 public class ProxyFactory {
 
+    @Autowired
     private TransactionManager transactionManager;
 
-    public void setTransactionManager(TransactionManager transactionManager) {
-        this.transactionManager = transactionManager;
-    }
+//    public void setTransactionManager(TransactionManager transactionManager) {
+//        this.transactionManager = transactionManager;
+//    }
 
     /**
      * JDK动态代理
